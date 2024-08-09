@@ -195,7 +195,7 @@ st.set_page_config(
 
 st.title("中途採用")
 st.sidebar.markdown("# STEP 1 ")
-interviewee_name = st.sidebar.text_input("アドバイザーの名前を入力してください", placeholder="例:山田太郎")
+interviewee_name = st.sidebar.text_input("担当者の名前を入力してください", placeholder="例:山田太郎")
 job_seeker_name = st.sidebar.text_input("求職者の名前を入力してください", placeholder="例:山田花子")
 st.sidebar.markdown("# STEP 2 ")
 uploaded_file = st.sidebar.file_uploader(
@@ -412,7 +412,7 @@ if uploaded_file is not None:
     # minutes_container3 = col3.empty()
 
     prompt1 = f"""
-これから、{interviewee_name}と{job_seeker_name}の面談音声から正確で詳細な議事録を作成する専門家です。以下の指示に従って、高品質な議事録を作成してください。
+あなたは、{interviewee_name}と{job_seeker_name}の面談音声から正確で詳細な議事録を作成する専門家です。以下の指示に従って、高品質な議事録を作成してください。
 
 ## 一般的な指示
 1. {interviewee_name}と{job_seeker_name}の話している内容は正確に分離して、{job_seeker_name}に関連する情報で議事録を作成してください。
