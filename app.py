@@ -634,7 +634,8 @@ if uploaded_file is not None:
 
     with st.spinner('Gemini 1.5 (pro) 実行中...'):
         minutes1 = ""
-        response1 = genearate(m4a_path, "models/gemini-1.5-pro", prompt1)
+        response1_modelname = "models/gemini-1.5-pro"
+        response1 = genearate(m4a_path, "gemini-pro-experimental", prompt1)
         for chunk1 in response1:
             minutes1 += chunk1.text
             minutes_container1.write(minutes1)
@@ -649,7 +650,7 @@ if uploaded_file is not None:
 
     with st.spinner('Gemini 1.5 (flash) 実行中...'):
         minutes2 = ""
-        response3 = genearate(m4a_path, "models/gemini-1.5-flash", prompt1)
+        response3 = genearate(m4a_path, "gemini-flash-experimental", prompt1)
         for chunk3 in response3:
             minutes2 += chunk3.text
             minutes_container2.write(minutes2)
